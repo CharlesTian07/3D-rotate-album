@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS3动画</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+			body {
+				perspective: 5000px;
+			}
+			.wrapper {
+				perspective: 5000px;
+				-webkit-transform: rotateX(15deg);
+				-moz-transform: rotateX(15deg);
+				transform: rotateX(15deg);
+				transform-style: preserve-3d;
+			}
+			.max-box {
+				position: relative;
+				width: 405px;
+				height: 270px;
+				margin: 360px auto;
+				transform-style: preserve-3d;
+				-webkit-animation: rotate1 6s linear infinite;
+				-moz-animation: rotate1 6s linear infinite;
+				animation: rotate1 6s linear infinite;
+			}
+			.min-box {
+				position: absolute;
+				width: 102px;
+				height: 68px;
+				left: 50%;
+				top: 50%;
+				margin-left: -51px;
+				margin-top: -34px;
+				transform-style: preserve-3d;
+				-webkit-animation: rotate2 6s linear infinite;
+				-moz-animation: rotate2 6s linear infinite;
+				animation: rotate2 6s linear infinite;
+			}
+			.max-box li {
+				width: 405px;
+				height: 270px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				opacity: 0.9;
+			}
+			.min-box li {
+				width: 102px;
+				height: 68px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.max-box .img1 {
+				/*background-image: url('images/lesson1.jpg');*/
+				background-image: url('images/supercar1.jpg');
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				-webkit-transform:translateZ(360px);
+				-moz-transform:translateZ(360px);
+				transform:translateZ(360px);
+				/*-webkit-box-reflect: below 20px -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,0) 30%,rgba(250,250,250,0.5));*/
+				animation: img1 1s linear;
+			}
+			.max-box .img2 {
+				/*background-image: url('images/lesson2.jpg');*/
+				background-image: url('images/supercar2.jpg');
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				-webkit-transform:rotateY(90deg) translateZ(360px);
+				-moz-transform:rotateY(90deg) translateZ(360px);
+				transform:rotateY(90deg) translateZ(360px);
+				/*-webkit-box-reflect: below 20px -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,0) 30%,rgba(250,250,250,0.5));*/
+				animation: img2 1s linear;
+			}
+			.max-box .img3 {
+				/*background-image: url('images/lesson3.jpg');*/
+				background-image: url('images/supercar3.jpg');
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				-webkit-transform:rotateY(180deg) translateZ(360px);
+				-moz-transform:rotateY(180deg) translateZ(360px);
+				transform:rotateY(180deg) translateZ(360px);
+				/*-webkit-box-reflect: below 20px -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,0) 30%,rgba(250,250,250,0.5));*/
+				animation: img3 1s linear;
+			}
+			.max-box .img4 {
+				/*background-image: url('images/lesson4.jpg');*/
+				background-image: url('images/supercar4.jpg');
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				-webkit-transform:rotateY(270deg) translateZ(360px);
+				-moz-transform:rotateY(270deg) translateZ(360px);
+				transform:rotateY(270deg) translateZ(360px);
+				/*-webkit-box-reflect: below 20px -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,0) 30%,rgba(250,250,250,0.5));*/
+				animation: img4 1s linear;
+			}
+			.max-box .img5 {
+				/*background-image: url('images/lesson5.jpg');*/
+				background-image: url('images/supercar5.jpg');
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				-webkit-transform:rotateX(90deg) translateZ(300px);
+				-moz-transform:rotateX(90deg) translateZ(300px);
+				transform:rotateX(90deg) translateZ(300px);
+				animation: img5 1s linear;
+			}
+			.max-box .img6 {
+				/*background-image: url('images/lesson6.jpg');*/
+				background-image: url('images/supercar6.jpg');
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				-webkit-transform:rotateX(450deg) translateZ(-300px);
+				-moz-transform:rotateX(450deg) translateZ(-300px);
+				transform:rotateX(450deg) translateZ(-300px);
+				animation: img6 1s linear;
+			}
+			.min-box .img1 {
+				/*background-image: url('images/lesson7.jpg');*/
+				background-image: url('images/supercar7.jpg');
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				-webkit-transform:translateZ(51px);
+				-moz-transform:translateZ(51px);
+				transform:translateZ(51px);
+				/*-webkit-box-reflect: below 20px -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,0) 30%,rgba(250,250,250,0.5));*/
+			}
+			.min-box .img2 {
+				/*background-image: url('images/lesson8.jpg');*/
+				background-image: url('images/supercar8.jpg');
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				-webkit-transform:rotateY(90deg) translateZ(51px);
+				-moz-transform:rotateY(90deg) translateZ(51px);
+				transform:rotateY(90deg) translateZ(51px);
+				/*-webkit-box-reflect: below 20px -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,0) 30%,rgba(250,250,250,0.5));*/
+			}
+			.min-box .img3 {
+				/*background-image: url('images/lesson9.jpg');*/
+				background-image: url('images/supercar9.jpg');
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				-webkit-transform:rotateY(180deg) translateZ(51px);
+				-moz-transform:rotateY(180deg) translateZ(51px);
+				transform:rotateY(180deg) translateZ(51px);
+				/*-webkit-box-reflect: below 20px -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,0) 30%,rgba(250,250,250,0.5));*/
+			}
+			.min-box .img4 {
+				/*background-image: url('images/lesson10.jpg');*/
+				background-image: url('images/supercar10.jpg');
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				-webkit-transform:rotateY(270deg) translateZ(51px);
+				-moz-transform:rotateY(270deg) translateZ(51px);
+				transform:rotateY(270deg) translateZ(51px);
+				/*-webkit-box-reflect: below 20px -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,0) 30%,rgba(250,250,250,0.5));*/
+			}
+			.min-box .img5 {
+				/*background-image: url('images/lesson11.jpg');*/
+				background-image: url('images/supercar11.jpg');
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				-webkit-transform:rotateX(90deg) translateZ(34px);
+				-moz-transform:rotateX(90deg) translateZ(34px);
+				transform:rotateX(90deg) translateZ(34px);
+			}
+			.min-box .img6 {
+				/*background-image: url('images/lesson12.jpg');*/
+				background-image: url('images/supercar12.jpg');
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				-webkit-transform:rotateX(450deg) translateZ(-34px);
+				-moz-transform:rotateX(450deg) translateZ(-34px);
+				transform:rotateX(450deg) translateZ(-34px);
+			}
+			@-moz-keyframes rotate1 {
+				0% {
+					-webkit-transform:rotateY(0deg);
+					-moz-transform:rotateY(0deg);
+					transform:rotateY(0deg);
+				}
+				100% {
+					-webkit-transform:rotateY(360deg);
+					-moz-transform:rotateY(360deg);
+					transform:rotateY(360deg);
+				}
+			}
+			@-webkit-keyframes rotate1 {
+				0% {
+					-webkit-transform:rotateY(0deg);
+					-moz-transform:rotateY(0deg);
+					transform:rotateY(0deg);
+				}
+				100% {
+					-webkit-transform:rotateY(360deg);
+					-moz-transform:rotateY(360deg);
+					transform:rotateY(360deg);
+				}
+			}
+			@-moz-keyframes rotate2 {
+				0% {
+					-webkit-transform:rotateY(0deg);
+					-moz-transform:rotateY(0deg);
+					transform:rotateY(0deg);
+				}
+				100% {
+					-webkit-transform:rotateY(360deg);
+					-moz-transform:rotateY(360deg);
+					transform:rotateY(360deg);
+				}
+			}
+			@-webkit-keyframes rotate2 {
+				0% {
+					-webkit-transform:rotateY(0deg);
+					-moz-transform:rotateY(0deg);
+					transform:rotateY(0deg);
+				}
+				100% {
+					-webkit-transform:rotateY(360deg);
+					-moz-transform:rotateY(360deg);
+					transform:rotateY(360deg);
+				}
+			}
+			@keyframes img1 {
+				0% {
+					-webkit-transform:translateZ(180px) scale(0.25, 0.25);
+					-moz-transform:translateZ(180px) scale(0.25, 0.25);
+					transform:translateZ(180px) scale(0.25, 0.25);
+					opacity: 0.1;
+				}
+				100% {
+					-webkit-transform:translateZ(360px) scale(1, 1);
+					-moz-transform:translateZ(360px) scale(1, 1);
+					transform:translateZ(360px) scale(1, 1);
+					opacity: 0.9;
+				}
+			}
+			@keyframes img2 {
+				0% {
+					-webkit-transform:rotateY(90deg) translateZ(180px) scale(0.25, 0.25);
+					-moz-transform:rotateY(90deg) translateZ(180px) scale(0.25, 0.25);
+					transform:rotateY(90deg) translateZ(180px) scale(0.25, 0.25);
+					opacity: 0.1;
+				}
+				100% {
+					-webkit-transform:rotateY(90deg) translateZ(360px) scale(1, 1);
+					-moz-transform:rotateY(90deg) translateZ(360px) scale(1, 1);
+					transform:rotateY(90deg) translateZ(360px) scale(1, 1);
+					opacity: 0.9;
+				}
+			}
+			@keyframes img3 {
+				0% {
+					-webkit-transform:rotateY(180deg) translateZ(180px) scale(0.25, 0.25);
+					-moz-transform:rotateY(180deg) translateZ(180px) scale(0.25, 0.25);
+					transform:rotateY(180deg) translateZ(180px) scale(0.25, 0.25);
+					opacity: 0.1;
+				}
+				100% {
+					-webkit-transform:rotateY(180deg) translateZ(360px) scale(1, 1);
+					-moz-transform:rotateY(180deg) translateZ(360px) scale(1, 1);
+					transform:rotateY(180deg) translateZ(360px) scale(1, 1);
+					opacity: 0.9;
+				}
+			}
+			@keyframes img4 {
+				0% {
+					-webkit-transform:rotateY(270deg) translateZ(180px) scale(0.25, 0.25);
+					-moz-transform:rotateY(270deg) translateZ(180px) scale(0.25, 0.25);
+					transform:rotateY(270deg) translateZ(180px) scale(0.25, 0.25);
+					opacity: 0.1;
+				}
+				100% {
+					-webkit-transform: rotateY(270deg) translateZ(360px) scale(1, 1);
+					-moz-transform: rotateY(270deg) translateZ(360px) scale(1, 1);
+					transform: rotateY(270deg) translateZ(360px) scale(1, 1);
+					opacity: 0.9;
+				}
+			}
+			@keyframes img5 {
+				0% {
+					-webkit-transform:rotateX(90deg) translateZ(150px) scale(0.25, 0.25);
+					-moz-transform:rotateX(90deg) translateZ(150px) scale(0.25, 0.25);
+					transform:rotateX(90deg) translateZ(150px) scale(0.25, 0.25);
+					opacity: 0.1;
+				}
+				100% {
+					-webkit-transform:rotateX(90deg) translateZ(300px) scale(1, 1);
+					-moz-transform:rotateX(90deg) translateZ(300px) scale(1, 1);
+					transform:rotateX(90deg) translateZ(300px) scale(1, 1);
+					opacity: 0.9;
+				}
+			}
+			@keyframes img6 {
+				0% {
+					-webkit-transform:rotateX(450deg) translateZ(-150px) scale(0.25, 0.25);
+					-moz-transform:rotateX(450deg) translateZ(-150px) scale(0.25, 0.25);
+					transform:rotateX(450deg) translateZ(-150px) scale(0.25, 0.25);
+					opacity: 0.1;
+				}
+				100% {
+					-webkit-transform:rotateX(450deg) translateZ(-300px) scale(1, 1);
+					-moz-transform:rotateX(450deg) translateZ(-300px) scale(1, 1);
+					transform:rotateX(450deg) translateZ(-300px) scale(1, 1);
+					opacity: 0.9;
+				}
+			}
+        }
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<ul class="max-box">
+				<li class="img1"></li>
+				<li class="img2"></li>
+				<li class="img3"></li>
+				<li class="img4"></li>
+				<li class="img5"></li>
+				<li class="img6"></li>
+			</ul>
+
+			<ul class="min-box">
+				<li class="img1"></li>
+				<li class="img2"></li>
+				<li class="img3"></li>
+				<li class="img4"></li>
+				<li class="img5"></li>
+				<li class="img6"></li>
+			</ul>
+		</div>
+	</body>
+</html>
